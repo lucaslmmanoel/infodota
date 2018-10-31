@@ -16,7 +16,7 @@ class TeamsController extends Controller
 
         $json = file_get_contents('https://api.opendota.com/api/teams');
         $data = json_decode($json);
-
+        //
 
         // Retornando para a tela de ligas
         return view('Teams.index' , compact('data'));
@@ -87,4 +87,5 @@ class TeamsController extends Controller
     {
         //
     }
+
 }

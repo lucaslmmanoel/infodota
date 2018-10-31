@@ -10,7 +10,6 @@
 
                 <div class="motto text-center" style="margin-top: 100px;">
                     <div class="card">
-                        <table id="table_leagues" class="table table-striped table-bordered table-hover">
                             <thead class="thead-dark">
                             <tr>
                                 <th>logo</th>
@@ -25,8 +24,8 @@
 
                             @foreach($data as $nome)
                                 <tr>
-                                    <td scope="col"><img src="{{$nome->logo_url}}" width="40px" height="40px" alt="logo não encontrada">   </td>
-                                    <td scope="col"> {{$nome->name}} </td>
+                                    <td scope="col"><img src="{{$nome->logo_url ? $nome->logo_url : {{('imgs/bg_img_1.jpg')}}  }}" width="40px" height="40px" alt="logo não encontrada">   </td>
+                                    <td scope="col"> {{$nome->name ? $nome->name : 'Sem nome' }} </td>
                                     <td scope="col"> {{$nome->wins}} </td>
                                     <td scope="col"> {{$nome->losses}} </td>
                                 </tr>

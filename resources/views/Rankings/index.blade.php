@@ -8,29 +8,45 @@
         <div class="container">
             <div class="motto text-center" style="margin-top: 100px;">
                 <div class="card">
-                    <table id="table_leagues" class="table table-striped table-bordered table-hover">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th>Nome</th>
-                        </tr>
-                        </thead>
+                    <div class="card-header">
+                        <form action="">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <select class="form-control" id="heroes" name="" id="heroes">
+                                        <option  value="">Selecione o herói</option>
+                                    </select>
+                                    <br>
+                                    <input type="submit" class="btn btn-success">
+                                </div>
+                            </div>
 
-                        <tbody>
-
-
-                        @foreach($data as $nome)
+                        </form>
+                    </div>
+                    <div class="card-body" id="table_heroes">
+                        <table id="table_leagues" class="table table-striped table-bordered table-hover" >
+                            <thead class="thead-dark">
                             <tr>
-                                <td scope="col"> {{$nome->personaname}} </td>
+                                <th>Ranking Mundial por Herói</th>
                             </tr>
-                        @endforeach
+                            </thead>
+
+                            <tbody>
 
 
-                        </tbody>
-                        <tr>
-                    </table>
+
+                            {{--@foreach($data as $nome)--}}
+                            {{--<tr>--}}
+                            {{--<td scope="col"> {{$nome->}} </td>--}}
+                            {{--</tr>--}}
+                            {{--@endforeach--}}
+
+                            </tbody>
+                            <tr>
+                        </table>
+                    </div>
                 </div>
-
             </div>
         </div>
+    </div>
 
 @endsection

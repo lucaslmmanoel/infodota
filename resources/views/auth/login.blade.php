@@ -13,18 +13,18 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="email"
-                                       class="col-sm-7 col-form-label text-md-right text-white">{{ __('E-Mail') }}
+                                <label for="username"
+                                       class="col-sm-7 col-form-label text-md-right text-white">{{ __('Nome de usuário') }}
                                     <i class="fa fa-user"></i>
                                 </label>
 
                                 <div class="col-md-10 offset-md-1">
-                                    <input id="email" type="email"
-                                           class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                           name="email" value="{{ old('email') }}"
-                                           required autofocus> @if ($errors->has('email'))
+                                    <input id="username" type="text"
+                                           class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
+                                           name="username" value="{{ old('username') }}"
+                                           required autofocus> @if ($errors->has('username'))
                                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('email') }}</strong>
+                                <strong>{{ $errors->first('username') }}</strong>
                             </span>
                                     @endif
                                 </div>

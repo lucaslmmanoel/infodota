@@ -27,7 +27,7 @@
     <!-- app.css -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- jquery.dataTables.min.css -->
-    <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet"><!-- jquery.dataTables.min.css -->
 </head>
 <body>
 <nav class="navbar navbar-expand-md fixed-top navbar-transparent" color-on-scroll="300">
@@ -124,7 +124,7 @@
 <script src="{{ asset('js/paper-kit.js') }}" defer></script>
 <!-- bootstrap-switch.min.js -->
 <script src="{{ asset('js/paper-kit.js') }}" defer></script>
-<!-- data-table.min.js -->
+<script src="{{ asset('js/request_heroes.js') }}" defer></script>
 
 
 </body>

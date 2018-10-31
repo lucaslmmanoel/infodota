@@ -16,7 +16,6 @@ class RankingController extends Controller
         $json = file_get_contents('https://api.opendota.com/api/rankings');
         $data = json_decode($json);
 
-
         // Retornando para a tela de ligas
         return view('Rankings.index', compact('data'));
     }

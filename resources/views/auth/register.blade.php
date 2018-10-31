@@ -20,7 +20,7 @@
                                         class="fa fa-user"></i> </label>
 
                                 <div class="col-md-10 offset-md-1">
-                                    <input id="name" type="text"
+                                    <input id="name" type="text" placeholder="Nome"
                                            class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                            name="name" value="{{ old('name') }}" required autofocus>
 
@@ -33,12 +33,31 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="username"
+                                       class="col-sm-7 col-form-label text-md-right text-white">{{ __('Nome de Usuário') }}
+                                    <i class="fa fa-message"></i> </label>
+
+                                <div class="col-md-10 offset-md-1">
+                                    <input id="username" type="text" placeholder="Nome de usuário"
+                                           class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
+                                           name="username" value="{{ old('username') }}" required>
+
+                                    @if ($errors->has('username'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
                                 <label for="email"
                                        class="col-sm-7 col-form-label text-md-right text-white">{{ __('E-Mail') }}
                                     <i class="fa fa-message"></i> </label>
 
                                 <div class="col-md-10 offset-md-1">
-                                    <input id="email" type="email"
+                                    <input id="email" type="email" placeholder="Email"
                                            class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                            name="email" value="{{ old('email') }}" required>
 
@@ -55,7 +74,7 @@
                                        class="col-sm-7 col-form-label text-md-right text-white">{{ __('Senha') }}</label>
 
                                 <div class="col-md-10  offset-md-1">
-                                    <input id="password" type="password"
+                                    <input id="password" type="password"  placeholder="Senha"
                                            class="form-control{{ $errors->has('password') ? 'Senha inválida' : '' }}"
                                            name="password" required>
 
@@ -72,7 +91,7 @@
                                        class="col-sm-8 col-form-label text-md-right text-white">{{ __('Confirme a Senha') }}</label>
 
                                 <div class="col-md-10  offset-md-1">
-                                    <input id="password-confirm" type="password" class="form-control"
+                                    <input id="password-confirm" type="password" class="form-control"  placeholder="Confirme a senha"
                                            name="password_confirmation" required>
                                 </div>
                             </div>
