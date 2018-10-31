@@ -2,6 +2,7 @@
 
 
 @section('content')
+    @can('isAdmin')
     <div class="page-header" data-parallax="true" style="background-image: url('{{('imgs/bg_img_4.jpg')}}');">
         <div class="filter"></div>
         <div class="container" id="menu-dropdown">
@@ -37,4 +38,5 @@
             </div>
         </div>
     </div>
+    @endcan
 @endsection

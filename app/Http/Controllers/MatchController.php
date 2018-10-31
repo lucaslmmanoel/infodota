@@ -3,6 +3,7 @@
 namespace InfoDota\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Auth\Access\Gate as Gate;
 
 class MatchController extends Controller
 {
@@ -13,6 +14,11 @@ class MatchController extends Controller
      */
     public function index()
     {
+
+        if(!\Gate::allows('isAdmin')){
+            abort(403, "Página não autorizada");
+        }
+
         return view('Match.index');
     }
 
