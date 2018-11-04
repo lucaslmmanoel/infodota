@@ -9,18 +9,15 @@
             <div class="motto text-center" style="margin-top: 100px;">
                 <div class="card">
                     <div class="card-header">
-                        <form action="">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <select class="form-control" id="heroes" name="" id="heroes">
-                                        <option  value="">Selecione o herói</option>
-                                    </select>
-                                    <br>
-                                    <input type="submit" class="btn btn-success">
-                                </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="heroes">Herói</label>
+                                <select class="form-control" id="heroes" name="" id="heroes">
+                                    <option  value="">Selecione o herói</option>
+                                </select>
+                                <br>
                             </div>
-
-                        </form>
+                        </div>
                     </div>
                     <div class="card-body" id="table_heroes">
                         <table id="table_leagues" class="table table-striped table-bordered table-hover" >

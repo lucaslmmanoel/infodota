@@ -125,6 +125,7 @@
 <!-- bootstrap-switch.min.js -->
 <script src="{{ asset('js/paper-kit.js') }}" defer></script>
 <script src="{{ asset('js/request_heroes.js') }}" defer></script>
+<script src="{{ asset('js/match.js') }}" defer></script>
 
 
 </body>

@@ -14,10 +14,14 @@
                 <div class="row text-center">
                     <div class="card-body">
 
-                        <h5 class="text-uppercase text-white-50 mb-4">Dota 2 é um jogo eletrônico do gênero Action Real-Time Strategy (abreviado como ARTS) ou
+                        <h5 class="text-uppercase text-white-50 mb-4">
+                            
+                            Dota 2 é um jogo eletrônico do gênero Action Real-Time Strategy (abreviado como ARTS) ou
                             também considerado do gênero Multiplayer Online Battle Arena (abreviado como MOBA), foi desenvolvido
                             pela Valve Corporation como sequência do Defense of the Ancients (DotA), uma modificação (mod) em um
-                            mapa desenvolvido para Warcraft III: The Frozen Throne.</h5>
+                            mapa desenvolvido para Warcraft III: The Frozen Throne.
+                            
+                            </h5>
 
                         <a href="http://br.dota2.com/" target="_blank" class="btn btn-link btn-danger"> Mais informações <i
                                 class="fa fa-gamepad"></i> </a>

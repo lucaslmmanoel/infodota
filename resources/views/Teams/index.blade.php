@@ -21,14 +21,15 @@
 
                             <tbody>
 
-
                             @foreach($data as $nome)
+                                
                                 <tr>
-                                    <td scope="col"><img src="{{$nome->logo_url ? $nome->logo_url : {{('imgs/bg_img_1.jpg')}}  }}" width="40px" height="40px" alt="logo não encontrada">   </td>
+                                    <td scope="col"><img src="{{$nome->logo_url ? $nome->logo_url : '' }}" width="40px" height="40px" alt="logo não encontrada">   </td>
                                     <td scope="col"> {{$nome->name ? $nome->name : 'Sem nome' }} </td>
                                     <td scope="col"> {{$nome->wins}} </td>
                                     <td scope="col"> {{$nome->losses}} </td>
                                 </tr>
+
                             @endforeach
 
 
