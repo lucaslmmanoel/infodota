@@ -6,7 +6,7 @@
         <div class="row mt-5">
             <div class="container">
                 <div class="motto text-center">
-                    <div class="card">
+                    <div class="card" style="margin-top: 100px">
                         <a href="{{route('match.create')}}" class="btn btn-outline-danger">Crie uma nova partida</a>
                         <table class="table table-bordered table-hover table-data">
                             <thead class="thead-dark">
@@ -36,22 +36,20 @@
                                     </td>
                                     <td>
                                         <div class="row">
-                                        @can('isAdmin')
-
-                                            <!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
-
-                                                <!-- we will add this later since its a little more complicated than the other two buttons -->
-
-
+                                            @can('isAdmin')
                                                 <a class="btn btn-small btn-warning"
                                                    href="{{ URL::to('match/' . $match->id . '/edit') }}">Atualizar <i
                                                         class="fa fa-pencil"></i>
                                                 </a>
 
-                                                <a class="btn btn-small btn-danger"
-                                                   href="{{ URL::to('match/' . $match->id . '/edit') }}">Delete <i
-                                                        class="fa fa-trash"></i>
-                                                </a>
+                                                <form action="{{action('MatchController@destroy', $match->id )}}"
+                                                      method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button class="btn btn-outline-danger" type="submit">DELETAR
+                                                    </button>
+                                                </form>
+
                                             @endcan
 
                                             <a href="" class="btn btn-small btn-success">Faça uma aposta <i

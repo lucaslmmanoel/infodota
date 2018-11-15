@@ -8,10 +8,10 @@
         <div class="container">
             <div class="motto text-center" style="margin-top: 100px;">
                 <div class="card">
-                    <table id="table_leagues" class="table table-striped table-bordered table-hover">
+                    <table id="table_leagues" class="table table-striped table-bordered table-hover table-data">
                         <thead class="thead-dark">
                         <tr>
-                            <th>nome da liga</th>
+                            <th>Nome da liga</th>
                             <th>Nível da Liga</th>
                         </tr>
                         </thead>

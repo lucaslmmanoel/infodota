@@ -22,7 +22,8 @@
                                 partidas apostadas ou não e muito mais!</p>
                         </div>
                         <div class="col-lg-12">
-                            <a href="http://br.dota2.com/" class="btn btn-link text-success btn-large btn-round"> Mais informações <i
+                            <a href="http://br.dota2.com/" target="_blank" class="btn btn-link text-success btn-large btn-round"> Mais
+                                informações <i
                                     class="fa fa-plus"></i> </a>
                             @can('isAdmin')
                                 <a href="{{route('match.create')}}" class="btn btn-link btn-danger btn-round"> Agende
@@ -30,16 +31,15 @@
                                     Partida<i
                                         class="fa fa-key"></i> </a>
                             @endcan
-                            <a href="{{route('match.index')}}" class="btn btn-link btn-danger btn-round"> Faça uma aposta <i
+                            <a href="{{route('match.index')}}" class="btn btn-link btn-danger btn-round"> Faça uma
+                                aposta <i
                                     class="fa fa-money"></i> </a>
                             <a href="{{route('leagues.index')}}" class="btn btn-link btn-success btn-large btn-round">
                                 Ver
                                 as ligas<i class="fa fa-eye"></i> </a>
                             <a href="{{route('times.index')}}" class="btn btn-link btn-danger btn-large btn-round"> Ver
                                 os
-                                Times<i class="fa fa-users"></i> </a>
-                            <a href="{{route('rankings.index')}}" class="btn btn-link btn-success  btn-large btn-round">
-                                Ver o Ranking Mundial<i class="fa fa-users"></i> </a>
+                                Times<i class="fa fa-users"></i>
                         </div>
                     </div>
                 </div>

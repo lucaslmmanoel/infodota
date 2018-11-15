@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="motto text-center">
                     <div class="card">
-                        <h1>Aposta do dia {{$match->match_date}} na hora {{$match->time_date}} </h1>
+                        <h1>Aposta do dia {{$match->match_date}} as {{$match->time_date}} </h1>
 
                             <h3>
                                 <strong>Time:</strong> {{ $match->first_team }}
@@ -18,7 +18,7 @@
                             <p>
                                 Esta partida será incrível
                             </p>
-                        <a href="" class="btn btn-link">Faça uma aposta</a>
+                        <a href="{{url('')}}" class="btn btn-link">Faça uma aposta</a>
                     </div>
                 </div>
             </div>

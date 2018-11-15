@@ -41,6 +41,9 @@ class MatchController extends Controller
      */
     public function store(Request $request)
     {
+        if (!\Gate::allows('isAdmin')) {
+            abort(403, "Página não autorizada");
+        }
         //
         $matchs = new Matchs;
         $matchs->first_team = $request->first_team;
@@ -72,9 +75,12 @@ class MatchController extends Controller
      */
     public function edit($id)
     {
+        if (!\Gate::allows('isAdmin')) {
+            abort(403, "Página não autorizada");
+        }
         //
-        $matchs = Matchs::findOrFail($id);
-        return view('Match.edit', compact('matchs'));
+        $match = Matchs::find($id);
+        return view('Match.edit')->with('match', $match);
     }
 
     /**
@@ -86,6 +92,9 @@ class MatchController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if (!\Gate::allows('isAdmin')) {
+            abort(403, "Página não autorizada");
+        }
         //
         $matchs = Matchs::findOrFail($id);
         $matchs->first_team = $request->first_team;
@@ -93,7 +102,7 @@ class MatchController extends Controller
         $matchs->match_date = $request->match_date;
         $matchs->match_time = $request->match_time;
         $matchs->save();
-        return redirect()->route('Match.index')->with('message', 'Partida Atualizada');
+        return redirect()->action('MatchController@index');
 
 
     }
@@ -106,10 +115,14 @@ class MatchController extends Controller
      */
     public function destroy($id)
     {
+        if (!\Gate::allows('isAdmin')) {
+            abort(403, "Página não autorizada");
+        }
         //
-        $matchs = Matchs::findOrFail($id);
+        $matchs = Matchs::find($id);
         $matchs->delete();
-        return redirect()->route('Matchs.index')->with('alert-success', 'Partida desmarcada');
+        return redirect()->action('MatchController@index');
+
 
     }
 }
