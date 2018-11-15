@@ -30,10 +30,8 @@
                                     Partida<i
                                         class="fa fa-key"></i> </a>
                             @endcan
-                            <a href="" class="btn btn-link btn-danger btn-round"> Faça uma aposta <i
+                            <a href="{{route('match.index')}}" class="btn btn-link btn-danger btn-round"> Faça uma aposta <i
                                     class="fa fa-money"></i> </a>
-                            <a href="" class="btn btn-link btn-success  btn-round"> Confira os proximos jogos <i
-                                    class="fa fa-gamepad"></i> </a>
                             <a href="{{route('leagues.index')}}" class="btn btn-link btn-success btn-large btn-round">
                                 Ver
                                 as ligas<i class="fa fa-eye"></i> </a>

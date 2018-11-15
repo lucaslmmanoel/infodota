@@ -28,7 +28,7 @@
                                     informações
                                     <i
                                         class="fa fa-gamepad"></i> </a>
-                                <a href="{{route('match.create')}}" class="btn btn-link btn-success"> Faça uma aposta <i
+                                <a href="{{route('match.index')}}" class="btn btn-link btn-success"> Faça uma aposta <i
                                         class="fa fa-money"></i> </a>
                                 <a href="{{route('match.create')}}" class="btn btn-link btn-danger"> Agende uma
                                     partida<i

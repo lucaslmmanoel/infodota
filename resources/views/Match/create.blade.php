@@ -34,27 +34,26 @@
                                     <img src="{{'imgs/logo.png'}}" alt="">
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="{{action('MatchController@store')}}">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+                                    <form method="POST" action="{{url('match')}}">
+                                        @csrf
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="time1"><h3> 1º TIME </h3></label>
-                                                <select class="form-control" id="time1" name="">
+                                                <select class="form-control" id="time1" name="first_team">
                                                     <option value="">Selecione o 1 º Time</option>
                                                 </select>
                                                 <br>
                                                 <label class="label" for="time2"><h3>2º TIME </h3></label>
-                                                <select class="form-control" id="time2" name="">
+                                                <select class="form-control" id="time2" name="second_team">
                                                     <option value="">Selecione o 2 º Time</option>
                                                 </select>
                                                 <br>
                                                 <label class="label" for="data"><h3>Dia da partida </h3></label>
-                                                <input class="form-control" type="date" name="" id="data">
+                                                <input class="form-control" type="date" name="match_date" id="data">
                                                 <br>
 
                                                 <label class="label" for="time"><h3>Hora da partida </h3></label>
-                                                <input class="form-control" type="time" name="" id="time">
+                                                <input class="form-control" type="time" name="time_date" id="time">
                                                 <br>
                                                 <input type="submit" class="btn btn-success">
                                             </div>

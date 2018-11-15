@@ -30,7 +30,7 @@
     <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet"><!-- jquery.dataTables.min.css -->
 </head>
 <body>
-<nav class="navbar navbar-expand-md fixed-top navbar-transparent" color-on-scroll="300">
+<nav class="navbar navbar-expand-md fixed-top navbar-transparent"  color-on-scroll="10">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <i style="font-size:20px" class="fa fa-steam"></i> DOTAINFO  <i style="font-size:30px" class="fa fa-gamepad"></i>
