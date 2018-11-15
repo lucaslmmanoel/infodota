@@ -1,5 +1,10 @@
+
+
+
+
 // Recuperando os dados dos timer
 $.getJSON("https://api.opendota.com/api/teams", function (all_data) {
+
     all_data.forEach(data => {
 
         // Exibindo os dados de marca

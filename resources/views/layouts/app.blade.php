@@ -83,7 +83,6 @@
 <main class="">
     @yield('content')
 </main>
-</div>
 <footer class="footer" style="background-color:#161616" height="100px">
     <div class="container">
         <div class="row">
@@ -105,6 +104,8 @@
 <!--
     Scripts
     -->
+
+    
 <!-- jquery.js -->
 <script src="{{ asset('js/jquery-3.2.1.js') }}" defer></script>
 
@@ -115,6 +116,8 @@
 
 <!-- jquery ui -->
 <script src="{{ asset('js/jquery-ui-1.12.1.custom.min.js') }}" defer></script>
+{{--Sweet alert--}}
+<script src="{{ asset('js/sweetalert2.all.min.js') }}" defer></script>
 
 <!-- popper -->
 <script src="{{ asset('js/popper.js') }}" defer></script>
@@ -126,7 +129,6 @@
 <script src="{{ asset('js/paper-kit.js') }}" defer></script>
 <script src="{{ asset('js/request_heroes.js') }}" defer></script>
 <script src="{{ asset('js/match.js') }}" defer></script>
-
 
 </body>
 </html>

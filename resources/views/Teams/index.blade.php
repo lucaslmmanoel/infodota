@@ -1,43 +1,32 @@
 @extends('layouts.app')
-
-
 @section('content')
-
     <div class="page-header" data-parallax="true" style="background-image: url('{{('imgs/bg_img_1.jpg')}}');">
         <div class="filter"></div>
-        <div class="row mt-5">
-            <div class="container">
-
-                <div class="motto text-center" style="margin-top: 100px;">
-                    <div class="card">
-                            <thead class="thead-dark">
+        <div class="container">
+            <div class="motto text-center" style="margin-top: 100px;">
+                <div class="card">
+                    <table id="table_leagues" class="table table-striped table-bordered table-hover">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>Nome do Time</th>
+                            <th>Tag do time</th>
+                            <th>logo do time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($data as $nome)
                             <tr>
-                                <th>logo</th>
-                                <th>Nome do Time</th>
-                                <th>Partidas Ganhas</th>
-                                <th>Partidas Perdidas</th>
+                                <td scope="col"> {{trim($nome->name) ? $nome->name : "Nome não encontrado"}}  </td>
+                                <td scope="col"> {{$nome->tag ? $nome->tag : "Tag não encontrada"}}  </td>
+                                <td scope="col"><img width="40px" heigth="40px" src="{{$nome->logo_url ? $nome->logo_url : asset('imgs/bg_img.jpg') }}" alt=""> </td>
                             </tr>
-                            </thead>
-
-                            <tbody>
-
-                            @foreach($data as $nome)
-                                
-                                <tr>
-                                    <td scope="col"><img src="{{$nome->logo_url ? $nome->logo_url : '' }}" width="40px" height="40px" alt="logo não encontrada">   </td>
-                                    <td scope="col"> {{$nome->name ? $nome->name : 'Sem nome' }} </td>
-                                    <td scope="col"> {{$nome->wins}} </td>
-                                    <td scope="col"> {{$nome->losses}} </td>
-                                </tr>
-
-                            @endforeach
-
-
-                            </tbody>
-                        </table>
-                    </div>
+                        @endforeach
+                        </tbody>
+                        <tr>
+                    </table>
                 </div>
+
             </div>
         </div>
-
+    </div>
 @endsection

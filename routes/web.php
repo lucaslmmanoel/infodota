@@ -7,6 +7,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/rankings', 'RankingController');
     Route::resource('/match', 'MatchController');
 
+
+    // Rotas referentes a pártida
 });
 
 
