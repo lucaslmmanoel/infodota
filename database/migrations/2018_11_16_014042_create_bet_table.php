@@ -14,10 +14,15 @@ class CreateBetTable extends Migration
     public function up()
     {
         Schema::create('bet', function (Blueprint $table) {
-            $table->increments('id');
-            $table->foreign('id')->references('id')->on('users');
-            $table->foreign('id')->references('id')->on('matchs');
-            $table->decimal('price',9,3);
+            $table->increments('id_bet');
+
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->integer('match_id')->unsigned();
+            $table->foreign('match_id')->references('id')->on('matchs');
+
+            $table->decimal('price', 9, 3);
             $table->timestamps();
         });
     }
