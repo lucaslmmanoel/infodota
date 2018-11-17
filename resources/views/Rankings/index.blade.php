@@ -3,7 +3,8 @@
 
 @section('content')
 
-    <div class="page-header" data-parallax="true" style="background-image: url('{{('imgs/bg_img_1.jpg')}}');">
+    <div class="page-header" data-parallax="true"  
+    >
         <div class="filter"></div>
         <div class="container">
             <div class="motto text-center" style="margin-top: 100px;">

@@ -47,7 +47,7 @@
                                                 <br>
                                                 <label class="label" for="time2"><h3>2º TIME </h3></label>
                                                 <select class="form-control" id="time2" name="second_team">
-                                                    <option value="">Selecione o 2 º Time</option>
+                                                    <option  value="">Selecione o 2 º Time</option>
                                                 </select>
                                                 <br>
                                                 <label class="label" for="data"><h3>Dia da partida </h3></label>

@@ -35,30 +35,43 @@
                                         {{$match->time_date}}
                                     </td>
                                     <td>
-                                        <div class="row">
-                                            @can('isAdmin')
-                                                <a class="btn btn-small btn-warning"
-                                                   href="{{ URL::to('match/' . $match->id . '/edit') }}">Atualizar <i
-                                                        class="fa fa-pencil"></i>
-                                                </a>
 
-                                                <form action="{{action('MatchController@destroy', $match->id )}}"
-                                                      method="POST">
-                                                    @csrf
-                                                    <input type="hidden" name="_method" value="DELETE">
-                                                    <button class="btn btn-outline-danger" type="submit">DELETAR
-                                                    </button>
-                                                </form>
+                                        <div class="row ml-auto mr-auto">
+                                            <div class="dropdown">
+                                                <button class="btn btn-outline-danger  dropdown-toggle" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                    Opções
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    @can('isAdmin')
+                                                        <a class="btn btn-small btn-link"
+                                                           href="{{ URL::to('match/' . $match->id . '/edit') }}">Atualizar
+                                                            <i
+                                                                class="fa fa-pencil"></i>
+                                                        </a>
+                                                        <form class=""
+                                                              action="{{action('MatchController@destroy', $match->id )}}"
+                                                              method="POST">
+                                                            @csrf
+                                                            <input type="hidden" name="_method" value="DELETE">
+                                                            <button class="btn btn-small btn-link" type="submit">Deletar
+                                                            </button>
+                                                            <i class="fa fa-trash"></i>
+                                                        </form>
+                                                    @endcan
 
-                                            @endcan
+                                                    <a href="{{route('bet.create')}}" class="btn btn-small btn-link">Faça
+                                                        uma aposta <i
+                                                            class="fa fa-money"></i>
+                                                    </a>
 
-                                            <a href="" class="btn btn-small btn-success">Faça uma aposta <i
-                                                    class="fa fa-money"></i>
-                                            </a>
-                                            <a class="btn btn-small btn-info"
-                                               href="{{ URL::to('match/' . $match->id) }}">Visualizar <i
-                                                    class="fa fa-eye"></i>
-                                            </a>
+                                                    <a class="btn btn-small btn-link"
+                                                       href="{{ URL::to('match/' . $match->id) }}">Visualizar <i
+                                                            class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </td>
 

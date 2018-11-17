@@ -3,8 +3,9 @@
 namespace InfoDota\Http\Controllers;
 
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Compound;
 
-class BeatsController extends Controller
+class BetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class BeatsController extends Controller
      */
     public function index()
     {
-        return view('Beats.index');
+//        $bets = Bets::all();
+        return view('Bet.index', compact('bets'));
     }
 
     /**
@@ -23,7 +25,7 @@ class BeatsController extends Controller
      */
     public function create()
     {
-        //
+        return view('Bet.create');
     }
 
     /**
@@ -34,7 +36,7 @@ class BeatsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
